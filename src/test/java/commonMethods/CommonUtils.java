@@ -1,6 +1,8 @@
 package commonMethods;
 
+import io.restassured.http.ContentType;
 import io.restassured.response.Response;
+import resources.Constants;
 
 import java.util.Map;
 
@@ -26,5 +28,20 @@ public class CommonUtils {
                     .extract()
                     .response();
         }
+    }
+
+
+
+    public static Response doPost(String endpoint,Object payload) {
+        return given()
+                .header("x-api-key", " reqres-free-v1")
+                .body(payload)                   // Attach payload
+                .when()
+                .post(endpoint)                  // POST endpoint
+                .then()
+                .extract()
+                .response();
+
+
     }
 }
