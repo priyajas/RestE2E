@@ -1,0 +1,86 @@
+n RestAssured, headers are used to provide metadata about the request, like Content-Type, Authorization,
+ Accept, etc. There are multiple ways to provide headers depending on your needs.
+ Here's a structured explanation:
+
+ 1.Using .header() for a single header
+ given()
+     .header("Authorization", "Bearer your_token_here")
+     .when()
+     .get("/users")
+     .then()
+     .statusCode(200);
+
+
+ Class/Interface: io.restassured.specification.RequestSpecification
+ Best for one header.
+
+ 2.given()
+       .headers(
+           "Authorization", "Bearer your_token_here",
+           "Content-Type", "application/json",
+           "Accept", "application/json"
+       )
+       .when()
+       .get("/users")
+       .then()
+       .statusCode(200);
+   Pass multiple key-value pairs in the same call.
+   Convenient for 2–3 headers.
+
+   3.Using a Map<String, String>
+     Map<String, String> headersMap = new HashMap<>();
+     headersMap.put("Authorization", "Bearer your_token_here");
+     headersMap.put("Content-Type", "application/json");
+     headersMap.put("Accept", "application/json");
+
+     given()
+         .headers(headersMap)
+         .when()
+         .get("/users")
+         .then()
+         .statusCode(200);
+
+     Best for dynamic headers from config files or properties.
+     Easy to maintain in frameworks.
+     4.Using RequestSpecBuilder
+
+       If you want reusable headers across multiple tests:
+
+       RequestSpecification requestSpec = new RequestSpecBuilder()
+               .setBaseUri("https://gorest.co.in/public/v2")
+               .addHeader("Authorization", "Bearer your_token_here")
+               .addHeader("Accept", "application/json")
+               .build();
+
+       RestAssured.requestSpecification = requestSpec;
+
+       given()
+           .when()
+           .get("/users")
+           .then()
+           .statusCode(200);
+           Headers are predefined in the spec and automatically applied to all requests.
+
+           Great for framework-level reuse.
+   5.Using .auth().oauth2() or .auth().preemptive().basic() for auth headers
+
+     Instead of manually adding Authorization:
+
+     // OAuth2 Bearer token
+     given()
+         .auth()
+         .oauth2("your_token_here")
+         .when()
+         .get("/users")
+         .then()
+         .statusCode(200);
+
+     // Basic Auth
+     given()
+         .auth()
+         .preemptive()
+         .basic("username", "password")
+         .when()
+         .get("/users")
+         .then()
+         .statusCode(200);
