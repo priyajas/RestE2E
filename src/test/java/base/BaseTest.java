@@ -13,7 +13,6 @@ import java.io.IOException;
 import java.util.Properties;
 
 public class BaseTest {
-
         protected static RequestSpecification requestSpec;
         protected static Properties prop;
 
@@ -21,7 +20,6 @@ public class BaseTest {
         public void setUp() {
             if (requestSpec == null) {
                 loadProperties();
-
                 requestSpec = new RequestSpecBuilder()
                         .setBaseUri(prop.getProperty("baseURI"))
                         .setBasePath(prop.getProperty("basePath"))

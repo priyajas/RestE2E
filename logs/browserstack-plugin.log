@@ -6,3 +6,21 @@
 00:21:21.753 [ApplicationImpl pooled thread 175] INFO  c.b.l.BrowserStackRunExtension - testng
 00:21:21.775 [ApplicationImpl pooled thread 175] INFO  com.browserstack.utils.Helpers - null
 00:21:21.775 [ApplicationImpl pooled thread 175] INFO  c.b.l.BrowserStackRunExtension - Agent path: null
+22:56:22.418 [ApplicationImpl pooled thread 66] INFO  c.b.l.BrowserStackRunExtension - testng
+22:56:22.419 [ApplicationImpl pooled thread 66] INFO  com.browserstack.utils.Helpers - null
+22:56:22.421 [ApplicationImpl pooled thread 66] INFO  c.b.l.BrowserStackRunExtension - Agent path: null
+22:59:20.209 [ApplicationImpl pooled thread 78] INFO  c.b.l.BrowserStackRunExtension - testng
+22:59:20.209 [ApplicationImpl pooled thread 78] INFO  com.browserstack.utils.Helpers - null
+22:59:20.209 [ApplicationImpl pooled thread 78] INFO  c.b.l.BrowserStackRunExtension - Agent path: null
+22:59:47.010 [ApplicationImpl pooled thread 81] INFO  c.b.l.BrowserStackRunExtension - testng
+22:59:47.010 [ApplicationImpl pooled thread 81] INFO  com.browserstack.utils.Helpers - null
+22:59:47.011 [ApplicationImpl pooled thread 81] INFO  c.b.l.BrowserStackRunExtension - Agent path: null
+23:01:38.905 [ApplicationImpl pooled thread 78] INFO  c.b.l.BrowserStackRunExtension - testng
+23:01:38.906 [ApplicationImpl pooled thread 78] INFO  com.browserstack.utils.Helpers - null
+23:01:38.907 [ApplicationImpl pooled thread 78] INFO  c.b.l.BrowserStackRunExtension - Agent path: null
+23:03:58.501 [ApplicationImpl pooled thread 84] INFO  c.b.l.BrowserStackRunExtension - testng
+23:03:58.501 [ApplicationImpl pooled thread 84] INFO  com.browserstack.utils.Helpers - null
+23:03:58.502 [ApplicationImpl pooled thread 84] INFO  c.b.l.BrowserStackRunExtension - Agent path: null
+23:05:01.438 [ApplicationImpl pooled thread 79] INFO  c.b.l.BrowserStackRunExtension - testng
+23:05:01.438 [ApplicationImpl pooled thread 79] INFO  com.browserstack.utils.Helpers - null
+23:05:01.438 [ApplicationImpl pooled thread 79] INFO  c.b.l.BrowserStackRunExtension - Agent path: null
